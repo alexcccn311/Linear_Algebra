@@ -13,10 +13,11 @@ A = np.array([
 
 
 def inverse_matrix(matrix):
-    cols, rows = np.shape(np.matrix)
-    if cols != rows or quick_calculate_determinant_value(matrix) == 0:
+    rows, cols = matrix.shape
+    value_determinant = quick_calculate_determinant_value(matrix)
+    if cols != rows or value_determinant == 0:
         raise ValueError("The input matrix don't have inverse matrix.")
-    result_matrix = adjugate_matrix(matrix) / quick_calculate_determinant_value(matrix)
+    result_matrix = adjugate_matrix(matrix) / value_determinant
     return result_matrix
 
 
