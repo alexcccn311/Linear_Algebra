@@ -1,7 +1,7 @@
 # 作者：Alex
 # 2024/9/7 下午4:58
 import numpy as np
-from calculation_determinant_value import laplace_expansion
+from calculation_laplace import laplace_expansion
 
 
 def algebraic_cofactor(matrix, x, y):

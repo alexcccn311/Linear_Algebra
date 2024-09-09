@@ -3,7 +3,7 @@
 import numpy as np
 from Row_column_multiples_check import determinant_same_cols_rows
 from vandermonde import vandermonde_test
-from calculation_determinant_value import laplace_expansion
+from calculation_laplace import laplace_expansion
 
 A = np.array([
     [1, 1, 1, 1],
@@ -11,6 +11,7 @@ A = np.array([
     [32, 14, 21, 1],
     [8, 27, -1, 1]
 ])
+
 
 def quick_calculate_determinant_value(matrix):
     rows, cols = matrix.shape
@@ -23,7 +24,7 @@ def quick_calculate_determinant_value(matrix):
             return determinant_value
         else:
             determinant_value = vandermonde_test(matrix)
-            if not isinstance(determinant_value, bool):
+            if type(determinant_value) is not bool:
                 return determinant_value
             else:
                 determinant_value = laplace_expansion(matrix)
