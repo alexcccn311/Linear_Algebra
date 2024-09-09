@@ -35,8 +35,9 @@ def vandermonde_calculation(matrix, vandermonde_rows, row):
     return result
 
 
-def vandermonde_test(matrix, row):
+def vandermonde_test(matrix):
     vandermonde_row, vandermonde_col = True, True
+    row, col = matrix.shape
     for y in range(row):
         if matrix[0, y] == 0:
             for x in range(row):
@@ -69,7 +70,7 @@ def vandermonde_test(matrix, row):
     if vandermonde_row or vandermonde_col:
         result = vandermonde_calculation(matrix, vandermonde_row, row)
         print(f'The Determinant is Vandermonde Determinant, Determinant(A)={result}')
-        return True
+        return result
     else:
         print('The Determinant is not Vandermonde Determinant')
         return False
@@ -80,4 +81,4 @@ if __name__ == '__main__':
     if rows != cols:
         print('The matrix is not determinant')
     else:
-        vandermonde_test(A, rows)
+        vandermonde_test(A)

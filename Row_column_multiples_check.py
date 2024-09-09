@@ -10,8 +10,9 @@ A = np.array([
 ])
 
 
-def determinant_same_cols_rows(matrix,row):
+def determinant_same_cols_rows(matrix):
     same_row, same_col = (False, False), (False, False)
+    row, col = matrix.shape
     xz, iz, zy, zk = -1, -1, -1, -1
     for x in range(row):
         for i in range(x + 1, row):
@@ -63,7 +64,7 @@ def determinant_same_cols_rows(matrix,row):
         print(f'the determinant=0,same_row={same_row},same_col={same_col}')
         return True
     else:
-        print('the matrix A not have any same cols or rows')
+        print("the matrix A don't have any same cols or rows")
         return False
 
 
@@ -71,5 +72,5 @@ if __name__ == '__main__':
     rows, cols = A.shape
     if rows != cols:
         print('The matrix is not determinant')
-    determinant_same_cols_rows(A, rows)
+    determinant_same_cols_rows(A)
 
