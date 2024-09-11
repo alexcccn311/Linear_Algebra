@@ -16,7 +16,6 @@ A = np.array([
 def quick_calculate_determinant_value(matrix):
     rows, cols = matrix.shape
     if rows != cols:
-        print('The matrix is not determinant')
         return False
     else:
         if determinant_same_cols_rows(matrix):

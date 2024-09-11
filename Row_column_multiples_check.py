@@ -61,10 +61,8 @@ def determinant_same_cols_rows(matrix):
         if same_col != (False, False):
             break
     if same_col != (False, False) or same_row != (False, False):
-        print(f'the determinant=0,same_row={same_row},same_col={same_col}')
         return True
     else:
-        print("the matrix A don't have any same cols or rows")
         return False
 
 

@@ -14,9 +14,13 @@ A = np.array([
 
 def inverse_matrix(matrix):
     rows, cols = matrix.shape
+    if cols != rows:
+        raise ValueError("The input matrix must be square to have an inverse.")
+
     value_determinant = quick_calculate_determinant_value(matrix)
-    if cols != rows or value_determinant == 0:
-        raise ValueError("The input matrix don't have inverse matrix.")
+    if value_determinant == 0:
+        raise ValueError("The input matrix does not have an inverse because it is singular (determinant is zero).")
+
     result_matrix = adjugate_matrix(matrix) / value_determinant
     return result_matrix
 

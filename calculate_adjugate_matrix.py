@@ -3,10 +3,9 @@
 import numpy as np
 from calculate_algebraic_cofactor import algebraic_cofactor
 A = np.array([
-    [1, 1, 1, 1],
-    [2, 3, -1, 1],
-    [4, 9, 1, 1],
-    [8, 27, -1, 1]
+    [2, -1, 0],
+    [1, 3, 4],
+    [0, -2, 5],
 ])
 
 
@@ -23,3 +22,4 @@ def adjugate_matrix(matrix):
 
 if __name__ == '__main__':
     print(adjugate_matrix(A))
+    print(adjugate_matrix(adjugate_matrix(A)))

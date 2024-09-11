@@ -72,7 +72,6 @@ def vandermonde_test(matrix):
         print(f'The Determinant is Vandermonde Determinant, Determinant(A)={result}')
         return result
     else:
-        print('The Determinant is not Vandermonde Determinant')
         return False
 
 
