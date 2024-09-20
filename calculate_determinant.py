@@ -5,15 +5,8 @@ from Row_column_multiples_check import determinant_same_cols_rows
 from vandermonde import vandermonde_test
 from calculation_laplace import laplace_expansion
 
-A = np.array([
-    [1, 1, 1, 1],
-    [2, 3, -1, 6],
-    [32, 14, 21, 1],
-    [8, 27, -1, 1]
-])
 
-
-def quick_calculate_determinant_value(matrix):
+def determinant_value(matrix):
     rows, cols = matrix.shape
     if rows != cols:
         return False
@@ -31,4 +24,10 @@ def quick_calculate_determinant_value(matrix):
 
 
 if __name__ == '__main__':
-    print(f'the determinant value = {quick_calculate_determinant_value(A)}')
+    A = np.array([
+        [1, 1, 1, 1],
+        [2, 3, -1, 6],
+        [32, 14, 21, 1],
+        [8, 27, -1, 1]
+    ])
+    print(f'the determinant value = {determinant_value(A)}')

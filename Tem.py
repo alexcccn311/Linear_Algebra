@@ -1,6 +1,6 @@
 import numpy as np
 from calculate_adjugate_matrix import adjugate_matrix
-from calculate_inverse_matrix import inverse_matrix
+from calculate_inverse_matrix_adjugate_matrix import inverse_matrix
 from calculate_determinant import quick_calculate_determinant_value
 
 A = np.array([

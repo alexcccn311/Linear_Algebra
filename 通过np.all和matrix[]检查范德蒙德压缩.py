@@ -2,13 +2,6 @@
 # 2024/8/30 上午9:58
 import numpy as np
 
-A = np.array([
-    [1, 1, 1, 1],
-    [2, 3, -1, 1],
-    [4, 9, 1, 1],
-    [8, 27, -1, 1]
-])
-
 
 def calculate_determinant(values):
     result = 1
@@ -56,6 +49,12 @@ def vandermonde_test(matrix, row):
 
 
 if __name__ == '__main__':
+    A = np.array([
+        [1, 1, 1, 1],
+        [2, 3, -1, 1],
+        [4, 9, 1, 1],
+        [8, 27, -1, 1]
+    ])
     rows, cols = A.shape
     if rows != cols:
         print('The matrix is not square and cannot have a determinant.')

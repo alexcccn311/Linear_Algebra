@@ -2,21 +2,6 @@
 # 2024/9/2 上午9:46
 import numpy as np
 
-A = np.array([
-    [1, 1, 1, 1, 1],
-    [2, 3, -1, 1, 4],
-    [4, 9, 1, 1, 16],
-    [8, 27, -1, 1, 64]
-])
-
-B = np.array([
-    [1, 24, 1, 17],
-    [2, 5, 22, 13],
-    [4, 7, 1, 12],
-    [8, 31, -13, 14],
-    [16, 25, 31, 24]
-])
-
 
 def matrix_multiplication(matrix1, matrix2):
     rows_1, cols_1 = matrix1.shape
@@ -32,4 +17,18 @@ def matrix_multiplication(matrix1, matrix2):
 
 
 if __name__ == "__main__":
+    A = np.array([
+        [1, 1, 1, 1, 1],
+        [2, 3, -1, 1, 4],
+        [4, 9, 1, 1, 16],
+        [8, 27, -1, 1, 64]
+    ])
+
+    B = np.array([
+        [1, 24, 1, 17],
+        [2, 5, 22, 13],
+        [4, 7, 1, 12],
+        [8, 31, -13, 14],
+        [16, 25, 31, 24]
+    ])
     print(matrix_multiplication(A, B))

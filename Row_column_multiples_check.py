@@ -2,13 +2,6 @@
 # 2024/8/30 上午3:05
 import numpy as np
 
-A = np.array([
-    [1, 2, 3, 4],
-    [0, 5, -1, 3],
-    [0, 0, 6, 32],
-    [3, 6, 9, 12]
-])
-
 
 def determinant_same_cols_rows(matrix):
     same_row, same_col = (False, False), (False, False)
@@ -67,6 +60,13 @@ def determinant_same_cols_rows(matrix):
 
 
 if __name__ == '__main__':
+    A = np.array([
+        [1, 2, 3, 4],
+        [0, 5, -1, 3],
+        [0, 0, 6, 32],
+        [3, 6, 9, 12]
+    ])
+
     rows, cols = A.shape
     if rows != cols:
         print('The matrix is not determinant')

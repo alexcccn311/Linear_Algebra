@@ -2,11 +2,6 @@
 # 2024/9/7 下午6:01
 import numpy as np
 
-A = np.array([
-    [3, 4],
-    [-2, 5]
-])
-
 
 def laplace_expansion(matrix):
     # 矩阵的行数和列数
@@ -32,4 +27,8 @@ def laplace_expansion(matrix):
 
 
 if __name__ == '__main__':
+    A = np.array([
+        [3, 4],
+        [-2, 5]
+    ])
     print(laplace_expansion(A))

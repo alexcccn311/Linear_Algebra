@@ -2,11 +2,6 @@
 # 2024/9/7 下午4:39
 import numpy as np
 from calculate_algebraic_cofactor import algebraic_cofactor
-A = np.array([
-    [2, -1, 0],
-    [1, 3, 4],
-    [0, -2, 5],
-])
 
 
 def adjugate_matrix(matrix):
@@ -21,5 +16,10 @@ def adjugate_matrix(matrix):
 
 
 if __name__ == '__main__':
+    A = np.array([
+        [2, -1, 0],
+        [1, 3, 4],
+        [0, -2, 5],
+    ])
     print(adjugate_matrix(A))
     print(adjugate_matrix(adjugate_matrix(A)))

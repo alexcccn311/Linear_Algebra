@@ -3,14 +3,6 @@
 import numpy as np
 
 
-A = np.array([
-    [1, 1, 1, 1],
-    [2, 3, -1, 1],
-    [4, 9, 1, 1],
-    [8, 27, -1, 1]
-])
-
-
 def vandermonde_calculation(matrix, vandermonde_rows, row):
     if vandermonde_rows:
         x = 1
@@ -76,6 +68,12 @@ def vandermonde_test(matrix):
 
 
 if __name__ == '__main__':
+    A = np.array([
+        [1, 1, 1, 1],
+        [2, 3, -1, 1],
+        [4, 9, 1, 1],
+        [8, 27, -1, 1]
+    ])
     rows, cols = A.shape
     if rows != cols:
         print('The matrix is not determinant')
